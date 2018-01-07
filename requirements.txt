@@ -1,0 +1,12 @@
+attrs==17.4.0
+click==6.7
+effect==0.11.0
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+pyrsistent==0.14.2
+six==1.11.0
+sqlite3==0.0.0
+toolz==0.9.0
+Werkzeug==0.14.1
