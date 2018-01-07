@@ -104,22 +104,3 @@ basement = Location(
 )
 world = pmap({x.name: x for x in [home, street, basement]})
 initial_state = GameState(location_name="Home", world=world)
-
-
-# assert move(initial_state, "down") is None
-# 
-# 
-# print(render(multimove(initial_state, ["east", "west"])))
-# 
-# 
-# print(
-#     render(
-#         thread_first(
-#             initial_state,
-#             (move, "east"),
-#             (take, "rusty key"),
-#             (move, "west"),
-#             (move, "down")
-#         )
-#     )
-# )
