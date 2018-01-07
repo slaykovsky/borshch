@@ -1,0 +1,37 @@
+<html>
+	<body>
+		<h1>{{state.location_name}}</h1>
+		<div>{{state.location.description}}</div>
+		<br />
+
+		<form name="action_move" action="move" method="POST">
+			Exits:
+			<ul>
+				{% for (exit_name, (key, dest)) in state.location.exits.items() %}
+				<li><input type="submit"
+	       				   name="exit_name"
+	       				   value="{{exit_name}}"
+					   style="display: inline-block" /> to {{dest}}</li>
+				{% endfor %}
+			</ul>
+		</form>
+
+		<form name="action_take" action="take" method="POST">
+			Items here:
+			{% for item_name in state.location.items %}
+			<input type="submit"
+	  		       name="item_name"
+	    		       value="{{item_name}}"
+	      		       style="display: inline-block" />
+			{% endfor %}
+		</form>
+
+
+		<div>Your inventory:
+			{% for item in state.inventory %}
+			{{item.name}}
+			{% endfor %}
+		</div>
+
+	</body>
+</html>
