@@ -57,7 +57,7 @@ def mainloop(state):
 
 def startup():
     conn = connect_db()
-    state = initialize(conn)
+    state = initialize(conn, initial_state)
     if state is None:
         state = initial_state
     st_dispatcher = sqlite_dispatcher(conn)
