@@ -14,4 +14,4 @@ pytest==3.3.2
 six==1.11.0
 sqlite3==0.0.0
 toolz==0.9.0
-Werkzeug==0.15.3
+Werkzeug==2.2.3
